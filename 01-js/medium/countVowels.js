@@ -6,7 +6,15 @@
 */
 
 function countVowels(str) {
-    // Your code here
+  clean = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  const n = clean.length;
+  var count = 0
+  for (let i = 0; i < n; i++) {
+    if (clean[i] == 'a' || clean[i] == 'e' || clean[i] == 'i' || clean[i] == 'o' || clean[i] == 'u') {
+      count = count + 1;
+    }
+  }
+  return count;
 }
-
+console.log(countVowels("mohit"))
 module.exports = countVowels;
