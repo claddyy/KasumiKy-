@@ -5,6 +5,13 @@
  */
 
 function sleep(milliseconds) {
+    return new Promise((resolve, reject) => {
+        if(milliseconds<0){
+            reject(new console.error(error));
+        } else {
+            setTimeout(resolve, milliseconds);
+        }
+    })
 }
 
 module.exports = sleep;
